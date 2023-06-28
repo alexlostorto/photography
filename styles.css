@@ -482,7 +482,7 @@ body {
 }
 
 .slide.splash {
-    background-image: url('assets/images/hero.jpg'); 
+    background-image: url('assets/images/hero.webp'); 
     background-size: cover;
     align-items: flex-start;
     text-transform: uppercase;
