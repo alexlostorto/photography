@@ -27,5 +27,10 @@ TABLE OF CONTENTS
 const splashScreen = document.querySelector('.slide.splash');
 
 fadeIn(splashScreen.querySelector('h3'), 200);
-fadeIn(splashScreen.querySelector('.header'), 500);
-fadeIn(splashScreen.querySelector('.small.header'), 500);
+
+fadeIn(splashScreen.querySelector('.big.header #enter-button'), 500);
+new hackerEffect(splashScreen.querySelector('.big.header .header-text'));
+
+fadeIn(splashScreen.querySelector('.small.header #enter-button'), 500);
+new hackerEffect(splashScreen.querySelector('.small.header .header-text.first'));
+new hackerEffect(splashScreen.querySelector('.small.header .header-text.last'));

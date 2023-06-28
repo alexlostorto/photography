@@ -8,6 +8,7 @@ TABLE OF CONTENTS
     2.2 VIEW COUNTER
     2.3 FADERS
     2.4 CREDITS
+    2.5 HACKER EFFECT
 3.0 NAVIGATION
     3.1 HAMBURGER FUNCTIONALITY
 4.0 CUSTOM CURSOR
@@ -132,6 +133,46 @@ async function fadeIn(element, delay) {
 function credits() {
     console.log.apply(console, ["%c Thanks for stopping by! I\u2019m currently looking to expand my programming knowledge and work with other like-minded devs. ","color: #fff; background: #8000ff; padding:5px 0;"])
     console.log.apply(console, ["%c Designed and Developed by Alex lo Storto %c\ud83d\ude80 ","color: #fff; background: #8000ff; padding:5px 0;","color: #fff; background: #242424; padding:5px 0 5px 5px;"])
+}
+
+    /*------------------------------------------------------------
+    |
+    | 2.5 HACKER EFFECT
+    |
+    ------------------------------------------------------------*/
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+class hackerEffect {
+    constructor(element) {
+        this.interval = null;
+        this.iteration = 0;
+        this.hackerEffect(element);
+    }
+
+    hackerEffect(element) { 
+        this.interval = setInterval(() => {
+            element.innerText = element.innerText
+            .split("")
+            .map((letter, index) => {
+                if (index < this.iteration) {
+                    return element.dataset.value[index];
+                }
+    
+                if (letter == ' ') {
+                    return ' ';
+                }
+                
+                return letters[Math.floor(Math.random() * 26)]
+            }).join("");
+    
+            if (this.iteration >= element.dataset.value.length) { 
+                clearInterval(this.interval);
+            }
+    
+            this.iteration += 1 / 3;
+        }, 30);
+    }
 }
 
 /*--------------------------------------------------------------

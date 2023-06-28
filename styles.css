@@ -469,6 +469,7 @@ body {
     gap: 2rem;
     background-color: var(--white);
     transition: ease-in-out 1s;
+    overflow: hidden;
 }
 
 .slide {
@@ -492,6 +493,11 @@ body {
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
+    text-wrap: nowrap;
+}
+
+.slide.splash span {
+    text-wrap: nowrap;
 }
 
 .slide.splash #enter-button {
@@ -570,11 +576,19 @@ body {
     .slide.splash .small.header {
         display: none;
     }
+
+    .slide.splash .big.header .header-text {
+        width: 58rem;
+    }
 }
 
 @media (max-width: 1000px) {
     .header-text {
         font-size: 5rem;
+    }
+
+    .slide.splash .big.header .header-text {
+        width: 41rem;
     }
 }
 
@@ -752,6 +766,5 @@ body {
 
     .slide.splash h3 {
         font-size: 0.9rem;
-        text-wrap: nowrap;
     }
 }
