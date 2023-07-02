@@ -34,3 +34,13 @@ new hackerEffect(splashScreen.querySelector('.big.header .header-text'));
 fadeIn(splashScreen.querySelector('.small.header #enter-button'), 500);
 new hackerEffect(splashScreen.querySelector('.small.header .header-text.first'));
 new hackerEffect(splashScreen.querySelector('.small.header .header-text.last'));
+
+splashScreen.querySelector('.big.header #enter-button').addEventListener('click', () => {
+    window.location = 'pages/architecture/index.html';
+    // splashScreen.style.display = 'none';
+});
+
+splashScreen.querySelector('.small.header #enter-button').addEventListener('click', () => {
+    window.location = 'pages/architecture/index.html';
+    // splashScreen.style.display = 'none';
+});
