@@ -1,0 +1,7 @@
+body {
+    overflow: auto;
+}
+
+.slide.main {
+    display: none;
+}

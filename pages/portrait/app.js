@@ -24,10 +24,13 @@ TABLE OF CONTENTS
     |
     ------------------------------------------------------------*/
 
+const lockScreen = document.querySelector('.slide.lock');
 const mainScreen = document.querySelector('.slide.main');
 
 const urlParams = new URLSearchParams(window.location.search);
-const myParam = urlParams.get('myParam');
+const pass = urlParams.get('p');
 
-console.log(urlParams);
-console.log(myParam);
+if (md5(pass) == '5ebe2294ecd0e0f08eab7690d2a6ee69') {
+    lockScreen.style.display = 'none';
+    mainScreen.style.display = 'flex';
+}
