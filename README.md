@@ -1,5 +1,7 @@
 <h1 align="center">Photography Portfolio</h1>
 
+![image](https://raw.githubusercontent.com/alexlostorto/photography/main/.github/home.png)
+
 <p align="center">
   <b>Elegantly showcase your photography.</b>
 </p>
@@ -9,8 +11,6 @@
 As a photographer, a portfolio showcasing my work is the most effective way of convincing clients of my worth. That's why I created this website!
 
 Click [**here**](https://alexlostorto.co.uk/) to visit my **Photography** portfolio and see my works.
-
-![image](https://raw.githubusercontent.com/alexlostorto/photography/main/.github/home.png)
 
 ## 📜 Credits
 
