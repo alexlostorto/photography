@@ -8,9 +8,9 @@
 
 As a photographer, a portfolio showcasing my work is the most effective way of convincing clients of my worth. That's why I created this website!
 
-Click [**here**](https://alexlostorto.github.io/photography/) to visit my **Photography** portfolio and see my works.
+Click [**here**](https://alexlostorto.co.uk/) to visit my **Photography** portfolio and see my works.
 
-![image](https://github.com/alexlostorto/photography/assets/114829362/70b68974-0c17-4481-88d1-0cd959e2414f)
+![image](https://raw.githubusercontent.com/alexlostorto/photography/main/.github/home.png)
 
 ## 📜 Credits
 
