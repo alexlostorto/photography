@@ -58,10 +58,78 @@ function getRelativePath($absolutePath, $parentTraversals) {
         background-color: var(--primary);
         display: none !important;
         padding: 2rem;
+        z-index: 9999;
     }
 
     #navbar-mobile #navbar-logo svg {
         height: 3rem;
+    }
+
+    #navbar-mobile #hamburger .line {
+        height: 3px;
+        background-color: var(--accent);
+        border-radius: 5px;
+        display: block;
+        margin: 8px 0 8px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #navbar-mobile #hamburger:hover {
+        cursor: pointer;
+    }
+
+    #navbar-mobile #hamburger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    #navbar-mobile #hamburger.active .line:nth-child(1) {
+        -webkit-transform: translateY(13px) rotate(45deg);
+        -ms-transform: translateY(13px) rotate(45deg);
+        -o-transform: translateY(13px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    #navbar-mobile #hamburger.active .line:nth-child(3) {
+        width: 50px !important;
+        -webkit-transform: translateY(-13px) rotate(-45deg);
+        -ms-transform: translateY(-13px) rotate(-45deg);
+        -o-transform: translateY(-13px) rotate(-45deg);
+        transform: translateY(-13px) rotate(-45deg);
+    }
+
+    #navbar-links-mobile {
+        display: none !important;
+        overflow: hidden;
+        height: 0;
+        padding: 0;
+        z-index: 999;
+        background-color: var(--primary);
+        transition: height 0.6s ease-in-out;
+        list-style: none;
+        gap: 3rem;
+    }
+
+    #navbar-links-mobile li a {
+        transition: all 0.2s ease-in-out;
+        border-radius: 5px;
+        color: var(--accent);
+        font-family: 'Poppins', sans-serif;
+        padding: 0.5rem 1rem;
+    }
+
+    #navbar-links-mobile li a:hover {
+        color: var(--primary);
+        background-color: var(--secondary);
+    }
+
+    #navbar-links-mobile li a#contact:hover {
+        background-color: var(--tertiary);
+    }
+
+    #navbar-links-mobile.active {
+        height: 100%;
     }
 
     @media only screen and (max-width: 768px) {
@@ -70,6 +138,10 @@ function getRelativePath($absolutePath, $parentTraversals) {
         } 
 
         #navbar-mobile {
+            display: flex !important;
+        }
+
+        #navbar-links-mobile {
             display: flex !important;
         }
     }
@@ -90,4 +162,15 @@ function getRelativePath($absolutePath, $parentTraversals) {
     <div id="navbar-logo">
         <?php include(getRelativePath("photography/assets/svg/logo-short.svg", $parentTraversals)); ?>
     </div>
+    <div id="hamburger" onclick="this.classList.toggle('active'); document.getElementById('navbar-links-mobile').classList.toggle('active');">
+        <span class="line" style="width: 50px;"></span>
+        <span class="line" style="width: 35px;"></span>
+        <span class="line" style="width: 20px;"></span>
+    </div>
 </nav>
+<ul id="navbar-links-mobile" class="position-absolute d-flex flex-column align-items-center justify-content-center w-100">
+    <li><a href="/photography/">home</a></li>
+    <li><a href="/photography/about/">about</a></li>
+    <li><a href="/photography/albums/">albums</a></li>
+    <li><a id="contact" href="/photography/contact/">contact</a></li>
+</ul>
