@@ -1,7 +1,7 @@
 <?php
 
-$seo_keywords = 'alexlostorto, Alex, Alex lo Storto, Alex Lo Storto, flashi, Flashi, flashcards, flashcard, revision, learning, science, physics, math, chemistry, revision tool, revision tools';
-$seo_description = "Revising couldn't be simpler!";
+$seo_keywords = 'alexlostorto, Alex, Alex lo Storto, Alex Lo Storto, photography, fine arts, nature, architecture, portfolio, photography portfolio, photographer, photos, headshots';
+$seo_description = "Capturing memories so they last forever ✨";
 $seo_author = 'Alex lo Storto';
 $site_title = 'Alex lo Storto';
 
