@@ -221,6 +221,64 @@ include('./components/header.php');
         grid-column: span 2;
     }
 
+    @media only screen and (max-width: 768px) {
+        body {
+            overflow-y: auto;
+        }
+
+        main {
+            flex-direction: column;
+            padding-right: 1rem;
+        }
+
+        #side-text {
+            width: auto !important;
+            margin: 1rem 0;
+        }
+
+        #side-text #theme-overflow {
+            height: 2.5rem;
+        }
+
+        #side-text #theme-container p {
+            z-index: -1;
+            height: 2.2rem;
+            margin-bottom: 2.2rem;
+            font-size: 1.2rem;
+        }
+
+        main #side-text h2 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        main #side-text h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        main #side-text #theme-overflow {
+            margin-left: 0;
+        }
+
+        #gallery {
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        @keyframes text-animation {
+            0% {margin-top: 0;}
+            16% {margin-top: 0;}
+            21% {margin-top: -4.4rem;}
+            37% {margin-top: -4.4rem;}
+            42% {margin-top: -8.8rem;}
+            58% {margin-top: -8.8rem;}
+            63% {margin-top: -4.4rem;}
+            79% {margin-top: -4.4rem;}
+            84% {margin-top: 0;}
+            100% {margin-top: 0;}
+        }
+    }
 </style>
 
 <?php include('./components/navbar.php'); ?>

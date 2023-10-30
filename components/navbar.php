@@ -22,6 +22,7 @@ function getRelativePath($absolutePath, $parentTraversals) {
 <style>
     /* DESKTOP */
     #navbar-desktop {
+        background-color: var(--primary);
         display: flex !important;
         padding: 2rem;
     }
@@ -54,6 +55,7 @@ function getRelativePath($absolutePath, $parentTraversals) {
 
     /* MOBILE */
     #navbar-mobile {
+        background-color: var(--primary);
         display: none !important;
         padding: 2rem;
     }

@@ -53,6 +53,19 @@ if (basename(__FILE__) == basename($_SERVER['SCRIPT_FILENAME'])) {
                 text-decoration: none;
                 color: var(--accent);
             }
+
+            ::-webkit-scrollbar {
+                z-index: 999; /* Adjust the value as needed */
+                width: 8px; /* Set the width of the scrollbar */
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: var(--accent); /* Color of the thumb (dragged part) */
+            }
+
+            ::-webkit-scrollbar-track {
+                background-color: var(--primary); /* Color of the track (background) */
+            }
         </style>
 
         <!-- Hotjar -->
