@@ -49,7 +49,7 @@ function getRelativePath($absolutePath, $parentTraversals) {
         background-color: var(--secondary);
     }
 
-    #navbar-desktop ul li a#contact:hover {
+    #navbar-desktop ul li a.contact:hover {
         background-color: var(--tertiary);
     }
 
@@ -124,7 +124,7 @@ function getRelativePath($absolutePath, $parentTraversals) {
         background-color: var(--secondary);
     }
 
-    #navbar-links-mobile li a#contact:hover {
+    #navbar-links-mobile li a.contact:hover {
         background-color: var(--tertiary);
     }
 
@@ -155,7 +155,7 @@ function getRelativePath($absolutePath, $parentTraversals) {
         <li><a href="/photography/">home</a></li>
         <li><a href="/photography/about/">about</a></li>
         <li><a href="/photography/albums/">albums</a></li>
-        <li><a id="contact" href="/photography/contact/">contact</a></li>
+        <li><a class="contact" href="/photography/contact/">contact</a></li>
     </ul>
 </nav>
 <nav id="navbar-mobile" class="position-absolute w-100 d-flex flex-row align-items-center justify-content-between">
@@ -172,5 +172,5 @@ function getRelativePath($absolutePath, $parentTraversals) {
     <li><a href="/photography/">home</a></li>
     <li><a href="/photography/about/">about</a></li>
     <li><a href="/photography/albums/">albums</a></li>
-    <li><a id="contact" href="/photography/contact/">contact</a></li>
+    <li><a class="contact" href="/photography/contact/">contact</a></li>
 </ul>
