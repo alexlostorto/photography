@@ -188,36 +188,40 @@ include('./components/header.php');
         object-fit: cover;
     }
 
-    #gallery .images-container.top-left {
+    #gallery .images-container:nth-child(1) {
         flex-direction: row-reverse;
     }
 
-    #gallery .images-container.top-right {
+    #gallery .images-container:nth-child(2) {
         flex-direction: column-reverse;
     }
 
-    #gallery .images-container.top-left img {
+    #gallery .images-container:nth-child(3) {
+        flex-direction: column;
+    }
+
+    #gallery .images-container:nth-child(1) img {
         position: relative;
         animation: top-left-animation 20s infinite;
     }
 
-    #gallery .images-container.top-right img {
+    #gallery .images-container:nth-child(2) img {
         position: relative;
         animation: top-right-animation 20s infinite;
     }
 
-    #gallery .images-container.bottom-left img {
+    #gallery .images-container:nth-child(3) img {
         position: relative;
         animation: bottom-left-animation 20s infinite;
     }
 
-    #gallery .images-container.bottom-right img {
+    #gallery .images-container:nth-child(4) img {
         position: relative;
         animation: bottom-right-animation 20s infinite;
-        flex-direction: row-reverse;
     }
 
-    #gallery .large {
+    #gallery .images-container:nth-child(2),
+    #gallery .images-container:nth-child(3) {
         grid-column: span 2;
     }
 
@@ -294,28 +298,33 @@ include('./components/header.php');
             </div>
         </div>
     </div>
-    <section id="gallery">
-        <div class="images-container top-left">
-            <img src="./gallery/home/architecture/1.jpg" alt="">
-            <img src="./gallery/home/nature/1.jpg" alt="">
-            <img src="./gallery/home/people/1.jpg" alt="">
-        </div>
-        <div class="images-container large top-right">
-            <img src="./gallery/home/architecture/2.jpg" alt="">
-            <img src="./gallery/home/nature/2.jpg" alt="">
-            <img src="./gallery/home/people/2.jpg" alt="">
-        </div>
-        <div class="images-container large bottom-left flex-column">
-            <img src="./gallery/home/architecture/3.jpg" alt="">
-            <img src="./gallery/home/nature/3.jpg" alt="">
-            <img src="./gallery/home/people/3.jpg" alt="">
-        </div>
-        <div class="images-container bottom-right">
-            <img src="./gallery/home/architecture/4.jpg" alt="">
-            <img src="./gallery/home/nature/4.jpg" alt="">
-            <img src="./gallery/home/people/4.jpg" alt="">
-        </div>
-    </section>
+    <section id="gallery"></section>
 </main>
+
+<script>
+
+function loadGallery() {
+    const apiUrl = './scripts/getHomePage.php';
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+
+    // Send the POST request
+    fetch(apiUrl, requestOptions)
+    .then(response => response.text()) // Convert the response to text
+    .then(html => {
+        document.getElementById("gallery").innerHTML = html;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+loadGallery();
+
+</script>
 
 <?php include('./components/footer.php'); ?>

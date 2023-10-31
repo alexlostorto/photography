@@ -1,0 +1,62 @@
+{
+    "home": {
+        "themes": [
+            {
+                "name": "Architecture",
+                "description": "Interesting buildings",
+                "images": [
+                    "/photography/gallery/home/architecture/1.jpg",
+                    "/photography/gallery/home/architecture/2.jpg",
+                    "/photography/gallery/home/architecture/3.jpg",
+                    "/photography/gallery/home/architecture/4.jpg"
+                ]
+            },
+            {
+                "name": "Nature",
+                "description": "Beautiful creations of mother nature",
+                "images": [
+                    "/photography/gallery/home/nature/1.jpg",
+                    "/photography/gallery/home/nature/2.jpg",
+                    "/photography/gallery/home/nature/3.jpg",
+                    "/photography/gallery/home/nature/4.jpg"
+                ]
+            },
+            {
+                "name": "People",
+                "description": "Photos of people",
+                "images": [
+                    "/photography/gallery/home/people/1.jpg",
+                    "/photography/gallery/home/people/2.jpg",
+                    "/photography/gallery/home/people/3.jpg",
+                    "/photography/gallery/home/people/4.jpg"
+                ]
+            }
+        ]
+    },
+    "albums": [
+        {   
+            "name": "Imperial College London",
+            "privacy": "public",
+            "id": "1",
+            "description": "University Open Day",
+            "cover": "/photography/albums/imperial-college/DSC01634.JPG",
+            "url": "/photography/albums/imperial-college/"
+        },
+        {
+            "name": "Cambridge Family Trip",
+            "privacy": "public",
+            "id": "2",
+            "description": "Family trip to Cambridge",
+            "cover": "/photography/albums/cambridge-family/DSC02081.JPG",
+            "url": "/photography/albums/cambridge-family/"
+        },
+        {
+            "name": "Cambridge",
+            "privacy": "public",
+            "id": "3",
+            "description": "University Open Day",
+            "cover": "/photography/albums/cambridge/DSC01314.JPG",
+            "url": "/photography/albums/cambridge/"
+        }
+    ]
+}

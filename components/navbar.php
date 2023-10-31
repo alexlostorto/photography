@@ -20,6 +20,10 @@ function getRelativePath($absolutePath, $parentTraversals) {
 ?>
 
 <style>
+    body.block-scroll {
+        overflow: hidden;
+    }
+
     /* DESKTOP */
     #navbar-desktop {
         background-color: var(--primary);
@@ -62,7 +66,7 @@ function getRelativePath($absolutePath, $parentTraversals) {
     }
 
     #navbar-mobile #navbar-logo svg {
-        height: 3rem;
+        height: 2.5rem;
     }
 
     #navbar-mobile #hamburger .line {
@@ -101,6 +105,8 @@ function getRelativePath($absolutePath, $parentTraversals) {
 
     #navbar-links-mobile {
         display: none !important;
+        position: sticky !important;
+        top: 0;
         overflow: hidden;
         height: 0;
         padding: 0;
@@ -153,7 +159,7 @@ function getRelativePath($absolutePath, $parentTraversals) {
     </div> 
     <ul id="navbar-links" class="d-flex flex-row align-items-center justify-content-between">
         <li><a href="/photography/">home</a></li>
-        <li><a href="/photography/about/">about</a></li>
+        <!-- <li><a href="/photography/about/">about</a></li> -->
         <li><a href="/photography/albums/">albums</a></li>
         <li><a class="contact" href="/photography/contact/">contact</a></li>
     </ul>
@@ -162,15 +168,15 @@ function getRelativePath($absolutePath, $parentTraversals) {
     <div id="navbar-logo">
         <?php include(getRelativePath("photography/assets/svg/logo-short.svg", $parentTraversals)); ?>
     </div>
-    <div id="hamburger" onclick="this.classList.toggle('active'); document.getElementById('navbar-links-mobile').classList.toggle('active');">
+    <div id="hamburger" onclick="this.classList.toggle('active'); document.getElementById('navbar-links-mobile').classList.toggle('active'); document.body.classList.toggle('block-scroll');">
         <span class="line" style="width: 50px;"></span>
         <span class="line" style="width: 35px;"></span>
         <span class="line" style="width: 20px;"></span>
     </div>
 </nav>
-<ul id="navbar-links-mobile" class="position-absolute d-flex flex-column align-items-center justify-content-center w-100">
+<ul id="navbar-links-mobile" class="d-flex flex-column align-items-center justify-content-center w-100">
     <li><a href="/photography/">home</a></li>
-    <li><a href="/photography/about/">about</a></li>
+    <!-- <li><a href="/photography/about/">about</a></li> -->
     <li><a href="/photography/albums/">albums</a></li>
     <li><a class="contact" href="/photography/contact/">contact</a></li>
 </ul>
