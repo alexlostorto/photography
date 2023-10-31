@@ -3,7 +3,7 @@ import os
 
 
 # Absolute path to the directory you want to search
-ROOT = os.path.join(os.getcwd(), 'images')
+ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'images')
 PREFIX = ''
 SUFFIX = ''
 
