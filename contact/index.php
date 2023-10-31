@@ -56,18 +56,18 @@ include('../components/header.php');
 
 <style>
     main {
-        padding: 7rem 1rem 2rem;
+        padding: 5rem 1rem 2rem;
     }
 
     main h1 {
         font-family: "Poppins", sans-serif;
         font-size: 3.5rem;
         font-weight: 300;
-        margin: 1.5rem 0 3rem -2rem;
+        margin-bottom: 1rem;
     }
 
     #contact-links {
-        margin: 1.5rem 0 0 -2rem;
+        margin-top: 1.5rem;
         list-style: none;
         padding: 0;
         gap: 1rem;
@@ -94,15 +94,6 @@ include('../components/header.php');
     #contact-links li a:hover {
         background-color: var(--secondary);
         color: var(--primary);
-    }
-
-    @media only screen and (max-width: 768px) {
-        main h1 {
-            margin: 0 0 2rem;
-        }
-    }
-
-    @media only screen and (min-width: 1500px) {
     }
 </style>
 
