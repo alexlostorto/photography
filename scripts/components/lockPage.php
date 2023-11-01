@@ -132,6 +132,14 @@ include('../../components/header.php');
         background-color: var(--secondary);
         color: var(--primary);
     }
+
+    @media only screen and (max-width: 768px) {
+        #password-message {
+            left: 50%;
+            top: 450%;
+            transform: translate(-50%, -50%);
+        }
+    }
 </style>
 
 <?php include('../../components/navbar.php'); ?>
