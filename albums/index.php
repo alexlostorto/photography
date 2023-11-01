@@ -66,22 +66,6 @@ include('../components/header.php');
         margin: 1.5rem 0 5rem -2rem;
     }
 
-    main h1::after {
-        content: 'public';
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 400;
-        padding: 0.4rem 1rem;
-        border-radius: 50px;
-        color: var(--accent);
-        border: 1px solid var(--accent);
-        font-size: 1rem;
-        position: absolute !important;
-        top: 50%;
-        margin-top: 0.1rem;
-        margin-left: 3rem;
-        transform: translate(-50%, -50%);
-    }
-
     #gallery {
         height: auto;
         width: 100%;
@@ -99,6 +83,17 @@ include('../components/header.php');
         overflow: hidden;
         position: relative;
         cursor: pointer;
+    }
+
+    #gallery > a > svg {
+        position: absolute !important;
+        font-family: 'Poppins', sans-serif;
+        transition: all 0.2s ease-in-out;
+        font-weight: 400;
+        height: clamp(2rem, 20%, 3rem);
+        top: 1rem;
+        right: 0.5rem;
+        color: var(--primary);
     }
 
     #gallery > a > img {

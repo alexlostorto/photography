@@ -122,6 +122,16 @@ function getViews($ID) {
     curl_close($ch);
 }
 
+function checkPassword($password) {
+    $p_value = $_GET['p']; // Get the 'p' query parameter
+
+    if ($p_value === $password) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 $album = findAlbumByID(getAlbums(), $albumID);
 $views = getViews($albumID)['value'];
 
@@ -133,6 +143,21 @@ if ($album) {
     $url = $album['url'];
 }
 
-include('../../scripts/components/albumPage.php')
+$incorrect = 'false';
+
+if ($privacy == 'private' && isset($password) && $password != null) {
+    if (isset($_GET['p']) && $_GET['p']) {
+        if (checkPassword($password)) {
+            include('../../scripts/components/albumPage.php');
+        } else {
+            $incorrect = 'true';
+            include('../../scripts/components/lockPage.php');
+        }
+    } else {
+        include('../../scripts/components/lockPage.php');
+    }
+} else {
+    include('../../scripts/components/albumPage.php');
+}
 
 ?>

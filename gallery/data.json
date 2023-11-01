@@ -57,6 +57,14 @@
             "description": "University Open Day",
             "cover": "/photography/albums/cambridge/DSC01314.JPG",
             "url": "/photography/albums/cambridge/"
+        },
+        {
+            "name": "Rehearsal Photography",
+            "privacy": "private",
+            "id": "4",
+            "description": "Headshots and Dress Rehearsals",
+            "cover": "/photography/albums/rehearsal-photography/play-rehearsals_52940603216_o.jpg",
+            "url": "/photography/albums/rehearsal-photography/"
         }
     ]
 }
