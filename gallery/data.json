@@ -35,6 +35,14 @@
     },
     "albums": [
         {   
+            "name": "Hacknotts",
+            "privacy": "public",
+            "id": "5",
+            "description": "HN'48 Hackathon",
+            "cover": "/photography/albums/hacknotts/DSC02608.JPG",
+            "url": "/photography/albums/hacknotts/"
+        },
+        {   
             "name": "Imperial College London",
             "privacy": "public",
             "id": "1",
