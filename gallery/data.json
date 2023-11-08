@@ -38,7 +38,7 @@
             "name": "Hacknotts",
             "privacy": "public",
             "id": "5",
-            "description": "HN'48 Hackathon",
+            "description": "HN'84 Hackathon",
             "cover": "/photography/albums/hacknotts/DSC02608.JPG",
             "url": "/photography/albums/hacknotts/"
         },
@@ -65,6 +65,14 @@
             "description": "University Open Day",
             "cover": "/photography/albums/cambridge/DSC01314.JPG",
             "url": "/photography/albums/cambridge/"
+        },
+        {   
+            "name": "USA College Day",
+            "privacy": "public",
+            "id": "6",
+            "description": "USA College Day at ILEC Conference Centre",
+            "cover": "/photography/albums/usa-college-day/DSC01841.JPG",
+            "url": "/photography/albums/usa-college-day/"
         },
         {
             "name": "Rehearsal Photography",
