@@ -35,6 +35,22 @@
     },
     "albums": [
         {   
+            "name": "Winter Wonderland",
+            "privacy": "public",
+            "id": "7",
+            "description": "Winter event at Nottingham City Centre",
+            "cover": "/photography/albums/winter-wonderland/DSC02778.JPG",
+            "url": "/photography/albums/winter-wonderland/"
+        },
+        {   
+            "name": "Vex IQ",
+            "privacy": "public",
+            "id": "8",
+            "description": "Vex IQ Competition 2023",
+            "cover": "/photography/albums/vex-iq/DSC02722.JPG",
+            "url": "/photography/albums/vex-iq/"
+        },
+        {   
             "name": "Hacknotts",
             "privacy": "public",
             "id": "5",
