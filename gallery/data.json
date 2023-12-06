@@ -35,6 +35,14 @@
     },
     "albums": [
         {   
+            "name": "Vex Regional Competition",
+            "privacy": "public",
+            "id": "9",
+            "description": "VEX competition at Stowe school",
+            "cover": "/photography/albums/vex-stowe/DSC02914.JPG",
+            "url": "/photography/albums/vex-stowe/"
+        },
+        {   
             "name": "Winter Wonderland",
             "privacy": "public",
             "id": "7",
