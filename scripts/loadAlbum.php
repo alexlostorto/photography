@@ -46,8 +46,17 @@ function loadImages() {
 
     for ($i=0; $i<count($files); $i++) {
         if (checkFileExtension($files[$i], $imageExtensions)) {
+            $imageInfo = getimagesize($path . '/' . $files[$i]);
+            $exif = exif_read_data($path . '/' . $files[$i]);
+            if(empty($exif['Orientation'])) {
+                $width = $imageInfo[0];
+                $height = $imageInfo[1];
+            } else{
+                $width = $imageInfo[1];
+                $height = $imageInfo[0];
+            }
             echo '<div>
-                <img src="' . $files[$i] . '" alt="">
+                <img src="' . $files[$i] . '" alt="" data-width="' . $width . '" data-height="' . $height . '">
             </div>';
         }
     }

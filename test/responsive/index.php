@@ -1,20 +1,72 @@
 <?php
 
-// PREVENT DIRECT ACCESS
-if (basename(__FILE__) == basename($_SERVER['SCRIPT_FILENAME'])) {
-    // The file is being accessed directly
-    http_response_code(403);
-    header("Location: /photography/403/");
-    exit;
-}
-// PREVENT DIRECT ACCESS
-
 $seo_keywords = 'alexlostorto, Alex, Alex lo Storto, Alex Lo Storto, photography, fine arts, nature, architecture, portfolio, photography portfolio, photographer, photos, headshots';
 $seo_description = "Capturing memories so they last forever ✨";
 $seo_author = 'Alex lo Storto';
 $site_title = 'Alex lo Storto';
 
 $title = 'Alex lo Storto';
+
+$name = 'Test';
+$description = 'Responsive gallery';
+$privacy = 'Public';
+$views = getViews('test')['value'];
+
+function loadImages() {
+    $images = 20;
+    for ($i=0; $i<$images; $i++) {
+        $width = rand(200, 1080);
+        $height = rand(200, 1080);
+        echo '<div>
+            <img src="https://source.unsplash.com/random/' . $width . 'x' . $height . '" alt="" data-width="' . $width . '" data-height="' . $height . '">
+        </div>';
+    }
+}
+
+function getViews($ID) {
+    $apiEndpoint = 'https://alexlostorto.co.uk/counter/counter.php';
+
+    // Data to be sent in the POST request
+    $data = array(
+        "increment" => "photography-$ID"
+    );
+
+    // Initialize cURL session
+    $ch = curl_init($apiEndpoint);
+
+    // Set cURL options for the POST request
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data)); // JSON-encode the data
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    // Set request headers (optional)
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Content-Type: application/json', // Specify the content type
+    ));
+
+    // Execute the POST request
+    $response = curl_exec($ch);
+
+    // Check for cURL errors
+    if (curl_errno($ch)) {
+        echo 'cURL error: ' . curl_error($ch);
+        // Handle the error as needed
+    } else {
+        // Decode the JSON response
+        $responseData = json_decode($response, true);
+
+        if ($responseData === null) {
+            echo 'Error decoding JSON: ' . json_last_error_msg();
+            // Handle the error as needed
+        } else {
+            // Access the response data
+            return $responseData;
+        }
+    }
+
+    // Close cURL session
+    curl_close($ch);
+}
 
 // Absolute paths don't work for some reason
 $parentTraversals = 3;
@@ -158,7 +210,7 @@ include('../../components/header.php');
             <?php include('../../assets/svg/eye.svg'); ?>
         </div>
     </div>
-    <section id="gallery" class="d-flex justify-content-center">
+    <section id="gallery" class="d-flex">
         <?php loadImages(); ?>
     </section>
 </main>
