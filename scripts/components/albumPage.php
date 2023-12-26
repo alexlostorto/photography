@@ -187,7 +187,14 @@ function resizeImages() {
     const maxWidth = gallery.clientWidth;
     const maxHeight = 600;
     let height = 0;
-    while (images.length > 0) {
+    if (maxWidth < 700) {
+        for (let i = 0; i < images.length; i++) {
+            row = [images[i]];
+            height = maxWidth/images[i][1];
+            rows.push([row, height]);
+        }
+    }
+    while (images.length > 0 && maxWidth >= 700) {
         row = [images[0]];
         totalRatio = images[0][1];
         for (let i = 0; i < images.length; i++) {
@@ -207,9 +214,9 @@ function resizeImages() {
 
     for (let i = 0; i < rows.length; i++) {
         let height  = rows[i][1]
-        if ((rows[i][0].length == 1) && (i == rows.length-1)) {
-            height = maxHeight;
+        if ((rows[i][0].length == 1) && (i == rows.length-1) && maxWidth >= 700) {
             const image = rows[i][0][0][0];
+            const height = maxHeight;
             const width = height * rows[i][0][0][1];
             image.style.width = `${width}px`;
             image.style.height = `${height}px`;
