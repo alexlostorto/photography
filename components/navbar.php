@@ -154,9 +154,9 @@ function getRelativePath($absolutePath, $parentTraversals) {
 </style>
 
 <nav id="navbar-desktop" class="position-absolute w-100 d-flex flex-row align-items-center justify-content-between">
-    <div id="navbar-logo">
+    <a id="navbar-logo" href="/photography/">
         <?php include(getRelativePath("photography/assets/svg/logo.svg", $parentTraversals)); ?>
-    </div> 
+    </a> 
     <ul id="navbar-links" class="d-flex flex-row align-items-center justify-content-between">
         <li><a href="/photography/">home</a></li>
         <!-- <li><a href="/photography/about/">about</a></li> -->
