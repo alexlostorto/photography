@@ -10,11 +10,14 @@ import shutil
 # Absolute path to the directory you want to search
 ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'media')
 COMPRESSED_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'compressed')  # Directory to save compressed files
+LANDSCAPE_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'landscape')  # Directory to save uncompressed files
 PREFIX = ''
 SUFFIX = ''
 
 FFMPEG_PATH = r"C:/Users/SECONDUSER/ffmpeg/bin/ffmpeg.exe"
 FFPROBE_PATH = r"C:/Users/SECONDUSER/ffmpeg/bin/ffprobe.exe"
+
+os.makedirs(LANDSCAPE_DIR, exist_ok=True)
 
 
 def get_video_rotation(file_path):
@@ -152,7 +155,6 @@ def compress_video(file_path, original_size, file_name):
             max_width = max_width_vertical
 
         # Save the resized video
-
         compressed_path = os.path.join(COMPRESSED_DIR, file_name)
         video.write_videofile(compressed_path, codec='libx264', audio_codec='aac', bitrate='3000k')
 
